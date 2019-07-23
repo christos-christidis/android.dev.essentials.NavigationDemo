@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- SOS: I don't use different activities. Instead, all fragments are hosted in this NavHostFragment.
+    This has a reference to navigation_graph, where it can be seen that the initial fragment hosted
+    will be FirstFragment. To select another fragment as 'start destination', right-click on it and
+    select the relevant option -->
+    <fragment
+        android:id="@+id/demo_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_graph" />
+</android.support.constraint.ConstraintLayout>
